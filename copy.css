@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html { height: 100%; }
+body { min-height: 100%;
+    background-image: url("backgroundpicture.jpg"); 
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.grid-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-column-gap: 3em;
+    grid-row-gap: 2em;
+    grid-template-columns: calc(2.5%/1.9) calc(22%/1.9) calc(2.5%/1.9) calc(13%/1.9) calc(2.5%/1.9) calc(20%/1.9) calc(15%/1.9) calc(2.5%/1.5);
+    grid-template-rows: calc(70%/5) calc(50%/5) calc(60%/5) calc(35%/5);
+    grid-template-areas: 
+    'one one one one . two three three'
+    'one one one one four four three three'
+    '. five five . . seven seven .'
+    'eight eight nine nine nine seven seven .'
+    'eight eight nine nine nine . . .'
+    ;
+    justify-content: center;
+    align-content: center;
+}
+.grid-container div {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 0;
+    font-size: 3em;
+    
+}
+  .item1 {grid-area: one;
+    border: 1px solid #ddd;
+    border-radius: 0.3em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: 0.2;
+    filter: alpha(opacity=50);
+}
+  .item2 {grid-area: two;
+    margin-top: 10%;
+    border: 1px solid #ddd;
+    border-radius: 0.3em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: 0.2;
+    filter: alpha(opacity=50);
+}
+  .item3 {grid-area: three;
+    border: 1px solid #ddd;
+    border-radius: 0.3em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: 0.2;
+    filter: alpha(opacity=50);
+}
+  .item4 {grid-area: four;
+    border: 1px solid #ddd;
+    border-radius: 0.3em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: 0.2;
+    filter: alpha(opacity=50);
+}
+  .item5 {grid-area: five;
+    border: 1px solid #ddd;
+    border-radius: 0.3em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: 0.2;
+    filter: alpha(opacity=50);
+}
+  #item6 {
+    grid-area: 4 / 7 / 6 / 9;
+    background: blueviolet;
+    /* position: relative; */
+    border: 1px solid #ddd;
+    border-radius: 0.3em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: 0.2;
+    filter: alpha(opacity=50);
+    
+    }
+  #item7 {
+    grid-area: seven;
+    background: brown;
+    border: 1px solid #ddd;
+    border-radius: 0.3em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: 0.2;
+    filter: alpha(opacity=50);
+    }
+  .item8 {grid-area: eight;
+    border: 1px solid #ddd;
+    border-radius: 0.3em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: 0.2;
+    filter: alpha(opacity=50);
+}
+  .item9 {grid-area: nine;
+    border: 1px solid #ddd;
+    border-radius: 0.3em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: 0.2;
+    filter: alpha(opacity=50);
+}
+  #link6 {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+  }
+  #link7 {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+  }

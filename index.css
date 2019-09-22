@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html { height: 100%; }
+body { min-height: 100%;
+  background-image: url("backgroundpicture.jpg"); 
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.grid-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-column-gap: 3em;
+  grid-row-gap: 2em;
+  grid-template-columns: calc(2.5%/1.9) calc(22%/1.9) calc(2.5%/1.9) calc(13%/1.9) calc(2.5%/1.9) calc(20%/1.9) calc(15%/1.9) calc(2.5%/1.9);
+  grid-template-rows: calc(70%/5) calc(50%/5) calc(60%/5) calc(35%/5);
+  grid-template-areas: 
+  'one one one one . two three three'
+  'one one one one four four three three'
+  '. five five . . seven seven .'
+  'eight eight nine nine nine seven seven .'
+  'eight eight nine nine nine . . .'
+  ;
+  justify-content: center;
+  align-content: center;
+}
+.grid-container div {
+  text-align: center;
+  padding: 0;
+  font-size: 3em;
+  
+}
+div[class*="item"]  {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.3em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+div[class*="item"]:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(2) translateX(2em);
+  box-shadow: 0 4em 8em 0 rgba(0, 0, 0, 0.2), 0 6em 20em 0 rgba(0, 0, 0, 0.19);
+}
+
+.item-1 {grid-area: one;}
+.item-2 {grid-area: two;
+  margin-top: 10%;
+}
+.item-3 {grid-area: three;}
+.item-4 {grid-area: four;}
+.item-5 {grid-area: five;}
+#item-6 {grid-area: 4 / 7 / 6 / 9;}
+/* #item-6:hover {} */
+.item-7 {grid-area: seven;}
+.item-8 {grid-area: eight;}
+.item-9 {grid-area: nine;}
+
+#link-6 {display: inline-block; height: 100%; width: 100%;}
+#link-7 {display: inline-block; height: 100%; width: 100%;}
